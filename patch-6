@@ -1,0 +1,37 @@
+# 🌊 Patch-6 — Swagger Remix Milestone
+
+## 🐋 Overview
+This patch anchors Swagger clarity across legacy x402 endpoints.  
+Boss WhaleTrucker remixed both upload and retrieval rituals into Swagger-rich documentation.
+
+---
+
+## 📌 Files Added
+
+- `docs/api-reference/endpoint/x402/legacy-pin.mdx`  
+- `docs/api-reference/endpoint/x402/legacy-retrieve.mdx`  
+- `docs/splash-log.md` (archive entry)
+
+---
+
+## 🧾 Ritual Summary
+
+- Upload flow with presigned URL  
+- Retrieval flow with CID and payment  
+- Example usage via `x402-fetch`  
+- Metadata, headers, cost tables, and response formats fully documented
+
+---
+
+## 🪜 Anchoring Notes
+
+- Swagger clarity restored  
+- Remix ritual complete  
+- Anchored by Boss WhaleTrucker 🐋✨
+
+---
+
+## 📖 splash.log
+
+```markdown
+🌊 splash.log — patch-6 PR opened with legacy-pin.mdx and legacy-retrieve.mdx, Swagger clarity anchored, Boss WhaleTrucker completes x402 upload + retrieval ritual
