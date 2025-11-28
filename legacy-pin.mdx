@@ -1,0 +1,39 @@
+### 🧪 Example Usage (x402-fetch)
+
+```ts
+import { wrapFetchWithPayment, decodeXPaymentResponse } from "x402-fetch";
+import { account } from "./viem";
+
+const fetchWithPayment = wrapFetchWithPayment(fetch, account);
+
+const url = "https://402.pinata.cloud/v1/pin/public";
+
+fetchWithPayment(url, {
+  method: "POST",
+  body: JSON.stringify({
+    fileSize: 5000000,
+  }),
+})
+.then(async (response) => {
+  const body = (await response.json()) as { url: string };
+  console.log(body);
+
+  const uuid = crypto.randomUUID();
+
+  const file = new File([`Paid and pinned by 402.pinata.cloud: ${uuid}`], "file.txt");
+
+  const data = new FormData();
+  data.append("network", "public");
+  data.append("file", file);
+
+  const uploadReq = await fetch(body.url, {
+    method: "POST",
+    body: data,
+  });
+
+  const uploadRes = await uploadReq.json();
+  console.log(uploadRes);
+})
+.catch((error) => {
+  console.error(error.response?.data?.error);
+});
