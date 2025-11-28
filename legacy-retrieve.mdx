@@ -1,0 +1,29 @@
+---
+openapi: /pinata-x402-api-v1.yaml get /retrieve/{network}/{cid}
+title: Retrieve a File (Legacy x402)
+---
+
+This is an early beta implementation of the x402 protocol.  
+For production use, please refer to the [Payment Instructions API](/files/x402-payment-instructions).
+
+### 🧾 Cost
+
+| Price         | Duration     |
+|---------------|--------------|
+| $0.10/GB × 12 | Temporary access URL |
+
+### 🛠️ Headers
+
+- `X-PAYMENT: <api-key>` — required for payment authorization
+
+### 📦 Path Parameters
+
+- `network` — `public` or `private`
+- `cid` — the content identifier of the file previously uploaded
+
+### 📤 Response
+
+```json
+{
+  "url": "https://temporary.pinata.cloud/access-url"
+}
