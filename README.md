@@ -1,6 +1,7 @@
 # Pinata Documentation
 
 ![header](https://docs.mypinata.cloud/ipfs/QmP9PGe3PdUqmsq8xY4sEW3qgdXx4WT9ictTWCb3qyzz3s?img-format=webp)
+![Patch-6: Swagger Remix](https://img.shields.io/badge/Patch--6-Swagger_Remix-blue?style=for-the-badge&logo=pinboard)
 
 Welcome to the official repository for [docs.pinata.cloud](https://docs.pinata.cloud)! Contributions and edits are welcome, please keep the following guidelines in mind:
 
