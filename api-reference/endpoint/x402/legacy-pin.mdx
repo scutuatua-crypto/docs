@@ -80,3 +80,28 @@ fetchWithPayment(url, {
     console.error(error.response?.data?.error);
   });
 ```
+---
+openapi: /pinata-x402-api-v1.yaml post /pin/{network}
+title: Upload a File (Legacy x402)
+---
+
+This is an early beta implementation of the x402 protocol.  
+For production use, please refer to the [Payment Instructions API](/files/x402-payment-instructions).
+
+### 🧾 Cost
+
+| Price         | Duration     |
+|---------------|--------------|
+| $0.10/GB × 12 | Pins for 12 months |
+
+### 🛠️ Headers
+
+- `Content-Type: application/json`
+- `X-PAYMENT: <api-key>` — required for payment authorization
+
+### 📦 Request Body
+
+```json
+{
+  "fileSize": 5000000
+}
