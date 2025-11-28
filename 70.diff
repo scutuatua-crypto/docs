@@ -1,0 +1,34 @@
+diff --git a/files/hot-swaps.mdx b/files/hot-swaps.mdx
+index 3a451ec..669a7bb 100644
+--- a/files/hot-swaps.mdx
++++ b/files/hot-swaps.mdx
+@@ -98,7 +98,7 @@ async function swap() {
+     const url = `https://api.pinata.cloud/v3/files/swap/${cid}`
+ 
+     const payload = JSON.stringify({
+-      swap_cid: "bafkreihumyr3bgxulu45ghws33xokwjm5o7xnkkgakaz66ldtylwiecnhu"
++      swapCid: "bafkreihumyr3bgxulu45ghws33xokwjm5o7xnkkgakaz66ldtylwiecnhu"
+     })
+ 
+     const request = await fetch(url, {
+diff --git a/pinata-api-v3.yaml b/pinata-api-v3.yaml
+index 8c30fa3..3ff62f0 100644
+--- a/pinata-api-v3.yaml
++++ b/pinata-api-v3.yaml
+@@ -3439,13 +3439,13 @@ paths:
+             schema:
+               type: object
+               required:
+-                - swap_cid
++                - swapCid
+               properties:
+-                swap_cid:
++                swapCid:
+                   type: string
+                   description: The CID you want to redirect to
+               example:
+-                swap_cid: bafkreig4zcnmqa23zff3ye7tuef6wrlq3aimffzm22axfeh3ddmawzlzz4
++                swapCid: bafkreig4zcnmqa23zff3ye7tuef6wrlq3aimffzm22axfeh3ddmawzlzz4
+       parameters:
+         - name: network
+           description: Target either the public or private IPFS network
